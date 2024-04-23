@@ -17,10 +17,10 @@ DetailsStu.innerHTML = `
 
 // Predefined correct answers
 const correctAnswer = {
-  question1: "C",
-  question2: "B",
-  question3: "C",
-  question4: "A",
+  question1: "A",
+  question2: "A",
+  question3: "A",
+  question4: "B",
 };
 
 submitBtn.addEventListener("click", function () {
