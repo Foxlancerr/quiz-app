@@ -11,5 +11,5 @@ function submitForm() {
 
   // Store form data in session storage
   sessionStorage.setItem("formData", JSON.stringify(formObject));
-  alert("Form data are successfully saved");
+  window.location.href = "quiz.html";
 }

@@ -1,6 +1,20 @@
 var form = document.getElementById("quizForm");
 var submitBtn = document.getElementById("quiz-form");
 
+var formgetValue = JSON.parse(sessionStorage.getItem("formData"))
+
+console.log(formgetValue)
+
+var DetailsStu = document.getElementById("DetailsStu");
+DetailsStu.innerHTML = `
+  <div>
+  <p>Name: ${formgetValue.name}</p>
+  <p>Roll Number: ${formgetValue.rollNumber}</p>
+  <p>Section: ${formgetValue.section}</p>
+  <p>Batch: ${formgetValue.batch}</p>
+  </div>
+`;
+
 // Predefined correct answers
 const correctAnswer = {
   question1: "C",
@@ -34,6 +48,13 @@ submitBtn.addEventListener("click", function () {
     }
   });
 
+  // Check if all questions have been answered
+  if (totalQuestions < Object.keys(correctAnswer).length) {
+    // Show alert if any question is unanswered
+    alert("Please make sure to answer all questions.");
+    return; // Stop further execution
+  }
+
   // Calculate the percentage of correct answers
   var percentage = (correctMarks / totalQuestions) * 100;
 
@@ -48,5 +69,6 @@ submitBtn.addEventListener("click", function () {
   sessionStorage.setItem("correctMarks", correctMarks);
   sessionStorage.setItem("percentage", percentage);
 
+  // Redirect to the result page
   window.location.href = "result.html";
 });
