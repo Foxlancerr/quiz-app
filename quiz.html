@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <aside>
+        <ul>
+          <a href="./">Student</a>
+          <a href="./quiz.html">Quiz Page</a>
+          <a href="./result.html">Result Page</a>
+        </ul>
+      </aside>
+      <section>
+        <h1 class="primary-h">Quiz Application</h1>
+
+        <form id="quizForm">
+          <div class="question">
+            <h2>Question 1:</h2>
+            <p>What does HTML stand for?</p>
+            <div class="options">
+              <label
+                ><input type="radio" name="question1" value="A" /> A. Hyper Text
+                Markup Language</label
+              >
+              <label
+                ><input type="radio" name="question1" value="B" /> B. Hyperlinks
+                and Text Markup Language</label
+              >
+              <label
+                ><input type="radio" name="question1" value="C" /> C. Home Tool
+                Markup Language</label
+              >
+              <label
+                ><input type="radio" name="question1" value="D" /> D. Hyperlink
+                Text Markdown Language</label
+              >
+            </div>
+          </div>
+          <div class="question">
+            <h2>Question 2:</h2>
+            <p>What does CSS stand for?</p>
+            <div class="options">
+              <label
+                ><input type="radio" name="question2" value="A" /> A. Cascading
+                Style Sheets</label
+              >
+              <label
+                ><input type="radio" name="question2" value="B" /> B. Creative
+                Style Sheets</label
+              >
+              <label
+                ><input type="radio" name="question2" value="C" /> C.
+                Informative Style Sheets</label
+              >
+              <label
+                ><input type="radio" name="question2" value="D" /> D. Colorful
+                Style Sheets</label
+              >
+            </div>
+          </div>
+          <div class="question">
+            <h2>Question 3:</h2>
+            <p>Which tag is used to create an unordered list in HTML</p>
+            <div class="options">
+              <label
+                ><input type="radio" name="question3" value="A" /> A. li</label
+              >
+              <label
+                ><input type="radio" name="question3" value="B" /> B. ul</label
+              >
+              <label
+                ><input type="radio" name="question3" value="C" /> C. a</label
+              >
+              <label
+                ><input type="radio" name="question3" value="D" /> D. br</label
+              >
+            </div>
+          </div>
+          <div class="question">
+            <h2>Question 4:</h2>
+            <p>Which of the following is a programming language?</p>
+            <div class="options">
+              <label
+                ><input type="radio" name="question4" value="A" /> A.HTML</label
+              >
+              <label
+                ><input type="radio" name="question4" value="B" /> B.
+                Javascript</label
+              >
+              <label
+                ><input type="radio" name="question4" value="C" /> C. CSS</label
+              >
+              <label
+                ><input type="radio" name="question4" value="D" /> D. JSX</label
+              >
+            </div>
+          </div>
+
+          <div id="quiz-form" class="btn-primary">Submit</div>
+        </form>
+
+        <div id="quiz-container">
+          <!-- Questions will be dynamically added here -->
+        </div>
+      </section>
+    </main>
+
+    <script src="./quiz.js"></script>
+  </body>
+</html>
